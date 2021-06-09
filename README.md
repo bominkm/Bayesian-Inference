@@ -6,7 +6,7 @@
 install.packages("rjags")
 library(rjags)
 ```
-If you got error, install the package with the link(https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/).
+If you got error, install the package with the [link](https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/).
 ```{r}
 library(rjags)
 Error : .onLoad failed in loadNamespace() for 'rjags', details:
@@ -17,7 +17,7 @@ Error : .onLoad failed in loadNamespace() for 'rjags', details:
   Reason: image not found
 Error: package or namespace load failed for ‘rjags’
 ```
-2. Generate chains
+2. Generate model
 ```{r}
 model = jags.model(textConnection(modelstring), data=list(y=y,I=I,t=t), n.chains=3, n.adapt=1000)
 ```
