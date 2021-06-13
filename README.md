@@ -22,10 +22,12 @@ Error: package or namespace load failed for ‘rjags’
 model = jags.model(textConnection(modelstring), data=list(y=y,I=I,t=t), n.chains=3, n.adapt=1000)
 ```
 3. Burning
+- n.iter: initial values
 ```{r}
 update(model, n.iter=1000)
 ```
 4. Thining
+- thin: interval to save
 ```{r}
 mcmc.samples = coda.samples(model, variable.names=c("a","b","c",'d'), n.iter=2000, thin=10)
 ```
